@@ -140,7 +140,7 @@ var {json: jsonMiddleware} = require('body-parser')
 //
 // let number = array.find(element => element === '3')
 
-// //Promice
+// //Promise
 // function userUpdate (user) {
 //   return new Promise((resolve, reject) => {
 //     user.name = 'Vasya'
