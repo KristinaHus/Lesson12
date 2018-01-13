@@ -29,7 +29,27 @@
 //     Because it was grassy and wanted wear,
 //     Though as for that the passing there
 //     Had worn them really about the same,`
+
+//Destructing assignments
+console.log(document.getElementById('input'))
+document.getElementById('input').addEventListener('input', handleInputChane)
+
+// function handleInputChane (event) {
+//   console.dir(event)
+//   var data = event.data
+//   var type = event.type
 //
+//   var value = event.target.value
+//   var offsetHeight = event.target.offsetHeight
+//   console.log(data, type, value, offsetHeight)
+// }
+
+function handleInputChane ({data, type, target: {value, offsetHeight}}) {
+  console.log(data, type, value, offsetHeight)
+}
+
+var jsonMiddleware = require('body-parser').json
+var {json: jsonMiddleware} = require('body-parser')
 
 //Block-Scoped Constructs Let and Const
 // function bar () {
@@ -103,3 +123,41 @@
 // let addToObj = {...mergedObj, name: 'Kina'}
 // console.log(addToObj)
 
+// //Arrow functions
+// var _this = this
+// document.getElementById('input').addEventListener('input', function (hendleInput) {
+//   _this.someFunction()
+// })
+//
+// document.getElementById('input').addEventListener('input', function (hendleInput) {
+//   this.someFunction()
+// })
+//
+// let array = ['1', '2', '3', '4']
+// let number = array.find(function (element) {
+//   return element === '3'
+// })
+//
+// let number = array.find(element => element === '3')
+
+// //Promice
+// function userUpdate (user) {
+//   return new Promise((resolve, reject) => {
+//     user.name = 'Vasya'
+//     if (user.age > 18) {
+//       user.adult = true
+//       resolve(user)
+//     } else {
+//       reject('To young')
+//     }
+//
+//   })
+// }
+//
+// userUpdate({age: 19})
+//   .then(user => {
+//     console.log(user)
+//   })
+//   .catch(err => {
+//     console.log(err)
+//   })
